@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-
 JOBS = [
     {
         'id': 1,
@@ -11,7 +10,7 @@ JOBS = [
     {
         'id': 2,
         'title': 'Flask Developer',
-        'salary': 'Rs.15,00,000'
+        'salary': 'Rs.15,00,000'  
     },
     {
         'id': 3,
@@ -20,12 +19,10 @@ JOBS = [
     }
 ]
 
-@app.route("/")
+
+@app.route("/")  # empty route means homepage and is denoted by "/"
 def hello_world():
     return render_template('home.html', jobs=JOBS)
-
-
-
 
 
 if __name__ == "__main__":
